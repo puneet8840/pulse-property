@@ -11,7 +11,7 @@ import {fetchproperties} from '../utils/request'
 const RecentProperties = async () => {
   const {properties}=await fetchproperties();
     
-   const recentProerties= properties.sort(()=>Math.random()-Math.random()).slice(0,3);
+   const recentProerties= (properties||[]).sort(()=>Math.random()-Math.random()).slice(0,3);
 
 
 

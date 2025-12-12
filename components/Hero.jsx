@@ -3,7 +3,7 @@ import PropertySearch from './PropertySearch'
 
 const HeroPage = () => {
   return (
-      < PropertySearch/>
+      <PropertySearch/>
   )
 }
 
