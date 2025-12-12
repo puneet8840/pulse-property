@@ -1,7 +1,7 @@
 import propertymodel from '../../../../../models/Property'
 import connectDb from '../../../../../config/database'
 
-
+export const dynamic = "force-dynamic";
 
 export const GET=async (request,{params})=>{
 try{

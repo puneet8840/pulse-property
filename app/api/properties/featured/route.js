@@ -1,6 +1,7 @@
 // import { couldStartTrivia } from 'typescript'
 import connectDb from '../../../../config/database'
 import propertymodel from '../../../../models/Property'
+export const dynamic = "force-dynamic";
 
 
 export const GET=async (request)=>{

@@ -3,7 +3,7 @@ import connectDb from '../../../config/database'
 import { getUserSession } from '../../../utils/getUserSession'
 import propertymodel from '../../../models/Property'
 import cloudinary from '../../../config/cloudinary'
-
+export const dynamic = "force-dynamic";
 export const GET=async (request)=>{
 try{
 const page=request.nextUrl.searchParams.get('page')||1

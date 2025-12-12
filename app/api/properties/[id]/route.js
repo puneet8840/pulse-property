@@ -2,6 +2,7 @@ import connectDb from '../../../../config/database'
 import propertymodel from '../../../../models/Property'
 import porpertymodel from '../../../../models/Property'
 import {getUserSession} from '../../../../utils/getUserSession'
+export const dynamic = "force-dynamic";
 
 export const GET=async (request,{params})=>{
 try{
