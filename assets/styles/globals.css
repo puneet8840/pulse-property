@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.propertyinfo{
+ grid-template-columns:70% 28% 
+
+}
+.view-properties{
+    position: relative;
+    bottom: 28px;
+}
