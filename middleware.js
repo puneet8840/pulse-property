@@ -1,4 +1,8 @@
-export { default } from 'next-auth/middleware';
+import NextAuthMiddleware from "next-auth/middleware";
+
+export default function middleware(req) {
+  return NextAuthMiddleware(req);
+}
 
 export const config = {
   matcher: [
