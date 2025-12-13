@@ -20,7 +20,7 @@ useEffect(()=>{
 const getUserProperties=async (userId)=>{
   try{
 
-    const res=await fetch(`http://localhost:3000/api/properties/user/${userId}`)
+    const res=await fetch(`/api/properties/user/${userId}`)
     if(!res.ok){
       throw Error("SOME ERROR OCURRED AT SERVER SIDE")
     }
@@ -42,7 +42,7 @@ const handleDelete=async (property_id)=>{
   const useans=confirm("are you sure you want to delete this property")
   try{ 
   if(!useans) return
-  const res=await fetch(`http://localhost:3000/api/properties/${property_id}`,{method:"DELETE"})
+  const res=await fetch(`/api/properties/${property_id}`,{method:"DELETE"})
   if(res.status===200) {
     toast.success('property deleted')
 }

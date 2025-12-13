@@ -18,7 +18,7 @@ const fetchPropertyBookemarkedStatus=async ()=>{
         return
     }
     try{
-    const res=await fetch('http://localhost:3000/api/bookmark/check',{method:'POST',body:JSON.stringify({propertyId:property._id}),headers:{
+    const res=await fetch('/api/bookmark/check',{method:'POST',body:JSON.stringify({propertyId:property._id}),headers:{
         'Content-Type':'application/json'
     }})
     if(res.status===500) toast.error('Internal server error');
@@ -52,7 +52,7 @@ fetchPropertyBookemarkedStatus();
 const handleClick=async ()=>{
     if(!userId) {toast.error('please log in') ;return}
         try{
-    const res=await fetch('http://localhost:3000/api/bookmark',{method:'POST',body:JSON.stringify({propertyId:property._id}),headers:{
+    const res=await fetch('/api/bookmark',{method:'POST',body:JSON.stringify({propertyId:property._id}),headers:{
         'Content-Type':'application/json'
     }})
     if(res.status===500) toast.error('Internal server error');

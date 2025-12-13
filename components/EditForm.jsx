@@ -76,7 +76,7 @@ finally{
     e.preventDefault();
     try{
     const data=new FormData(e.target)
-    const res=await fetch(`http://localhost:3000/api/properties/${id}`,{method:"PUT",body:data})
+    const res=await fetch(`/api/properties/${id}`,{method:"PUT",body:data})
     if(res.status===401)toast.error('unathorized acces')
       else if(res.status===404)toast.error("propert not found")
     else if(res.status===500)toast.error("internal server error")
