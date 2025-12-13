@@ -77,7 +77,7 @@ toast.error(`${error.message}`)
             <div className="md:w-1/4 mx-20 mt-10">
               <div className="mb-4">
                 <Image
-                  className="sm:h-48 sm:w-48 h-48 w-48 md:h-32 md:w-32 sm:rounded-md  rounded-full mx-auto md:mx-0 object-cover"
+                  className="sm:h-48 sm:w-48 h-48 w-48 md:h-32 md:w-32 sm:rounded-full  rounded-md mx-auto md:mx-0 object-cover"
                   src={profileImage||profiledefault}
                   alt="User"
                   width={192}
