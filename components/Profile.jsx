@@ -99,7 +99,7 @@ toast.error(`${error.message}`)
   transition={{ type: "spring", damping: 30, stiffness: 400 }}
   rotationInterval={2000}
 /> </h2>
-              <h2 className="text-2xl"><span className="font-bold block">Email: </span> {profileEmail}</h2>
+              <h2 className="text-2xl wrap-break-word"><span className="font-bold block">Email: </span> {profileEmail}</h2>
             </div>
 
             <div className="md:w-3/4 md:pl-4">
