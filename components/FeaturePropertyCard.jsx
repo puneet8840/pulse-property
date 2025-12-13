@@ -23,7 +23,7 @@ const FeaturePropertyCard = ({property}) => {
   return (
     
           <div
-            className="bg-white rounded-xl shadow-md relative flex flex-col md:flex-row"
+            className="bg-white rounded-xl shadow-md relative flex flex-col md:flex-row "
           >
             <Image
               src={property.images[0]}
