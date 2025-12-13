@@ -48,7 +48,7 @@ export const POST = async (request) => {
       });
     const { name, email, phone, recepient, property, message } =
       await request.json();
-    // if(sessionUser.user.id.toString()===recepient.toString()) return new Response(JSON.stringify({message:'cannot send message to self'}),{status:400})
+    if(sessionUser.user.id.toString()===recepient.toString()) return new Response(JSON.stringify({message:'cannot send message to self'}),{status:400})
     const newMessage = new Message({
       sender: sessionUser.user.id,
       name,
