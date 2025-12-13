@@ -26,6 +26,13 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 
+
 }
+/* .media{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+} */
 
 }
