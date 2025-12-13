@@ -239,7 +239,7 @@ setAuthProvider();
             >Add Property</Link
           >}
           {!session &&
-                    (<div className="hidden md:block md:ml-6">
+                    (<div className="hidden sm:block sm:ml-6 md:block md:ml-6">
             <div className="flex items-center">
              {provider && Object.values(provider).map((provider,index)=>(<button key={index} onClick={()=>signIn(provider.id)}
                 className="flex items-center my-2 text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
