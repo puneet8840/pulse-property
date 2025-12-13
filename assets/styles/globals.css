@@ -28,6 +28,15 @@ align-items: center;
 
 
 }
+.profile{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+}
 /* .media{
     display: flex;
     flex-direction: row;

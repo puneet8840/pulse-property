@@ -69,7 +69,7 @@ toast.error(`${error.message}`)
 
 
   return (
-    <section className="bg-blue-50">
+    <section className="bg-blue-50 profile">
       <div className="container m-auto py-24">
         <div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
           <h1 className="text-3xl font-bold mb-4">Your Profile</h1>
@@ -77,11 +77,12 @@ toast.error(`${error.message}`)
             <div className="md:w-1/4 mx-20 mt-10">
               <div className="mb-4">
                 <Image
-                  className="h-200 w-200 md:h-48 md:w-48 rounded-full mx-auto md:mx-0"
+                  className="sm:h-48 sm:w-48 h-48 w-48 md:h-32 md:w-32  rounded-full mx-auto md:mx-0 object-cover"
                   src={profileImage||profiledefault}
                   alt="User"
-                  width={200}
-                  height={200}
+                  width={192}
+                  height={192}
+                  sizes="(min-width: 768px) 128px, 192px"
                 />
               </div>
               <h2 className="text-2xl mb-4"><span className="font-bold block">Name: </span>
@@ -106,7 +107,7 @@ toast.error(`${error.message}`)
             {!loading && !properties && (<h2 className="text-xl font-semibold mb-4"><p>no properties are listed</p></h2>) }
 
             {!loading && properties && (properties.map((property)=>{
-              return ( <div key={property._id} className="mb-10">
+              return ( <div key={property._id} className="mb-10 border-2 border-solid border-amber-500 px-2 py-2 mt-2 bg-blue-100 rounded-md">
                 <Link href={`/properties/${property._id}`}>
                   <Image
                     className="h-32 w-full rounded-md object-cover"
