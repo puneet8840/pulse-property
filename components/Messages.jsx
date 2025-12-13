@@ -17,8 +17,7 @@ if(res.status===200){
     
     const data=await res.json()
     setMessages(data);
-    console.log(data)
-    console.log(res.status)
+    
 }
 }
 catch(error){

@@ -12,7 +12,7 @@ try{
 const res=await fetch('/api/messages/unread-messages')
 if(res.status===200){
     const count=await res.json()
-    console.log(count,'hey')
+    
     setCount(count)
 }
 }

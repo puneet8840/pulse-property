@@ -15,3 +15,17 @@
     position: relative;
     bottom: 28px;
 }
+
+@media (max-width: 767px) {
+  /* Mobile styles */
+
+.propertyinfo{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+}

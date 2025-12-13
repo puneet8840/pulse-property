@@ -22,7 +22,7 @@ const ContactForm = ({property}) => {
 
       const res=await fetch('/api/messages',{method:'POST',body:JSON.stringify(data),headers:{'Content-type':"application/json"}})
       const resdata=await res.json()
-      console.log(resdata)
+      
       if(res.status===400|| res.status===401) toast.error(resdata.message);
       else if(res.status===200){
          toast.success(resdata.message)

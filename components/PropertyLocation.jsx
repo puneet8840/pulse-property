@@ -41,7 +41,7 @@ const res=await fromAddress(`${property.location.street} ${property.location.sta
     const {lat,lng}=res.results[0].geometry.location;
     setLat(lat);
     setLng(lng);
-    console.log(typeof lat,typeof lng)}
+    }
     catch(err){
         setGeoCodeError(true)
         toast.error(err)}

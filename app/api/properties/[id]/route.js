@@ -37,9 +37,9 @@ try{
     const { id } =await params
     const userSession=await getUserSession();
     if(!userSession||!userSession.userId) return new Response("Not a session",{status:500})
-    console.log('heyy',id)
+    
     const properties= await porpertymodel.findById(id)
-    console.log('properties',properties.owner)
+    
     if(!properties){ return new Response("property not found",{status:404})}
     if(properties.owner.toString()!==userSession.userId.toString()){ 
         
@@ -67,7 +67,7 @@ return new Response("something went wrong",{status:500})
 
 //PUT request
 export const PUT=async (request,{params})=>{
-    console.log('from put')
+   
     try{
         const {id}=await params;
         await connectDb();
@@ -106,7 +106,7 @@ export const PUT=async (request,{params})=>{
     
 }
 
-console.log('punnu')
+
 if(existingProperty.owner.toString()!==userId.toString()){return new Response('unauthorized access',{status:401})}
 await propertymodel.findByIdAndUpdate(id, property);
 

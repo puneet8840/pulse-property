@@ -64,7 +64,7 @@ const userId=sessionUser.userId;
     // images,
 
 }
-console.log('puneet');
+
 const imageUploadPromises=[];
 for(let image of images){
     const imageBuffer= await image.arrayBuffer();
@@ -83,7 +83,7 @@ for(let image of images){
 property.images=imageUploadPromises;
 
 
-console.log(property)
+
  const newProperty=new propertymodel(property)
 await newProperty.save();
    

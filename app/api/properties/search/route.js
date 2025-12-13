@@ -25,7 +25,7 @@ try{
         const typePattern=new RegExp(propertyType,'i');
     query.type=typePattern;}
     const searchResult=await propertymodel.find(query);
-    console.log(searchResult)
+    
     return new Response(JSON.stringify(searchResult),{status:200})
 
 

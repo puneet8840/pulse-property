@@ -41,11 +41,11 @@ try{
     await connectDb();
     //get property id from post request
     const {propertyId} =await request.json();
-    console.log('hey',propertyId)
+    
     //get user id from session
     const sessionUser=await getUserSession();
     //check if session exists
-    console.log(sessionUser.userId)
+   
     if(!sessionUser||!sessionUser.userId) return new Response("session unavailable",{status:401})
     //get user from database
     const user=await usermodel.findOne({_id:sessionUser.userId})
@@ -60,7 +60,7 @@ try{
         message="bookmark removed successfully"
         isBookmarked=false
     }
-    console.log(user.bookmarks)
+    
     user.save()
     return new Response(JSON.stringify({message,isBookmarked}),{status:200})
     

@@ -14,7 +14,7 @@ try{
     //get user id from session
     const sessionUser=await getUserSession();
     //check if session exists
-    console.log(sessionUser.userId)
+    
     if(!sessionUser||!sessionUser.userId) return new Response("session unavailable",{status:401})
     //get user from database
     const user=await usermodel.findOne({_id:sessionUser.userId})

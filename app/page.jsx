@@ -9,7 +9,7 @@ import InfoBoxes from '../components/InfoBoxes'
 
 const HomePage =  () => {
 
-  // console.log(process.env.MONGODB_URL)
+ 
 
   return (<>
   

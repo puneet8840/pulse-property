@@ -22,7 +22,7 @@ useEffect(()=>{
 
   const setAuthProvider=async ()=>{
     const res=await getProviders();
-    console.log(res)
+   
     
     setProvider(res)
   }
