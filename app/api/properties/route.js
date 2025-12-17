@@ -36,7 +36,7 @@ export const POST=async (request)=>{
         if(!sessionUser|| !sessionUser.userId)
         {
 
-            return new Response('Unauthorized user',{status:500})
+            return new Response('Unauthorized user',{status:401})
         }
 const userId=sessionUser.userId;
    const data= await request.formData()
@@ -74,7 +74,7 @@ for(let image of images){
     const imageBase64=imageData.toString('base64');
     //upload to cloud
     
-   const result= await cloudinary.uploader.upload(`data:image/png;base64,${imageBase64}`,{folder:'property-pulse'})
+   const result= await cloudinary.uploader.upload(`data:${image.type};base64,${imageBase64}`,{folder:'property-pulse'})
     imageUploadPromises.push(result.secure_url);
     
     
