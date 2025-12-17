@@ -74,7 +74,9 @@ for(let image of images){
     const imageBase64=imageData.toString('base64');
     //upload to cloud
     
-   const result= await cloudinary.uploader.upload(`data:${image.type};base64,${imageBase64}`,{folder:'property-pulse'})
+   const result= await cloudinary.uploader.upload(`data:${image.type};base64,${imageBase64}`,{folder:'property-pulse', resource_type: "image",
+    format: "webp",        // 🔥 FORCE conversion
+    quality: "auto"})
     imageUploadPromises.push(result.secure_url);
     
     
